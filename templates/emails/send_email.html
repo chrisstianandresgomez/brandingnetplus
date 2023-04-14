@@ -1,0 +1,17 @@
+{% extends "emails/emailbase.html" %}
+{% block titulo %}Nueva sugerencia recibida{% endblock %}
+{% block contenido %}
+    <img style="margin-bottom: 18px" width="350px" src="https://us.123rf.com/450wm/ximagination/ximagination2107/ximagination210700389/171753291-concepto-de-vector-de-sugerencia-gente-de-negocios-poniendo-bombilla-en-un-buz%C3%B3n-de-sugerencias.jpg?ver=6"><br>
+    <div style="text-space: 2px">
+        <p>
+            <b>Nombre:</b> {{ data.sugerencia.nombre }}<br>
+            <b>Correo:</b> {{ data.sugerencia.email }}<br>
+            <b>Latitud:</b> {{ data.sugerencia.latitud }}<br>
+            <b>Longitud:</b> {{ data.sugerencia.longitud }}<br>
+            <b>Telefono:</b> {{ data.sugerencia.telefono }}<br>
+            <b>Comentario:</b> {{ data.sugerencia.sugerencia }}<br>
+        </p>
+        <br>
+        <br>Este mail es automático por favor no responder.
+    </div>
+{% endblock %}

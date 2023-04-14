@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% block sxtra_styles %}
+{% endblock %}
+{% block morescripts %}
+
+{% endblock %}
+{% block classnav %} {{ classnav }}{% endblock %}
+{% block hearder_wrapper %}
+  <header class="page-header">
+            <div class="container"><span class="ltx-before"></span>
+                <h1 class="header ltx-check-scroll ltx-glitch" data-text="Contact Us">Contactos</h1>
+                <ul class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+                    <li class="home"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Ir al inicio." href="/" class="home"><span
+                            property="name">Inicio</span></a><meta property="position" content="1"></span></li>
+                    <li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span
+                            property="name">Contactos</span><meta property="position" content="2"></span></li>
+                </ul>
+                <span class="ltx-after"></span>
+                <div class="ltx-header-icon"></div>
+            </div>
+        </header>
+{% endblock %}
+{% block wrapper %}text-page margin-top{% endblock %}
+{% block content %}
+    <div class="col-xl-12 col-xs-12 text-page">
+        <article id="post-25" class="post-25 page type-page status-publish hentry">
+                        <div class="entry-content clearfix" id="entry-div">
+                            <section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section">
+                                <div class="vc_row wpb_row vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <ul class="ltx-block-icon  has-descr  icons-count-4 align-center ltx-icon-color-main ltx-icon-size-default ltx-header-color-default ltx-icon-type-circle ltx-bg-color-transparent layout-cols4 ltx-icon-top  row centered"
+                                                    id="like_sc_block_icon_589604755">
+{#                                                    <li class=" col-lg-3 col-md-6 col-sm-6 col-ms-12 col-xs-12">#}
+{#                                                        <div class="in"><span#}
+{#                                                                class="ltx-icon fa fa-location-arrow bg-transparent"></span>#}
+{#                                                            <h6 class="header"> Direccion</h6>#}
+{#                                                            <div class="descr">29 Nicolas str, New York, 987597-50</div>#}
+{#                                                        </div>#}
+{#                                                    </li>#}
+                                                    <li class=" col-lg-4 col-md-6 col-sm-6 col-ms-12 col-xs-12">
+                                                        <div class="in"><span
+                                                                class="ltx-icon fa fa-phone bg-transparent"></span><h6
+                                                                class="header"> Teléfonos</h6>
+                                                            <div class="descr">{% for telefono in telefonos %}
+                                                            {{ telefono.telefono }} <span class="mdi mdi-{% if telefono.tipo == 0%}cellphone-sound{% else %}phone-classic{% endif %}"></span>{% if not forloop.last %}<br/>{% endif %}
+                                                            {% endfor %}
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class=" col-lg-4 col-md-6 col-sm-6 col-ms-12 col-xs-12">
+                                                        <div class="in"><a class="ltx-icon fa fa-envelope bg-transparent"></a>
+                                                            <h6 class="header"> Correos</h6>
+                                                            <div class="descr">{% for correo in correos %}
+                                                            {{ correo }} {% if not forloop.last %}<br/>{% endif %}
+                                                            {% endfor %}
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class=" col-lg-4 col-md-6 col-sm-6 col-ms-12 col-xs-12">
+                                                        <div class="in"><span
+                                                                class="ltx-icon fa fa-clock-o bg-transparent"></span><h6
+                                                                class="header"> Horarios de Atención</h6>
+                                                            <div class="descr">{% for horario in horarios %}
+                                                                {{ horario.get_dia1_display|lower|capfirst }} - {{ horario.get_dia2_display|lower|capfirst }}<br/> {{ horario.get_hora_1 }} - {{ horario.get_hora_2 }}{% if not forloop.last %}<br/>{% endif %}
+{#                                                             Lunes - Sábado<br/> 8:00 AM - 5:00 PM#}
+                                                            {% endfor %}
+
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+
+
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="ltx-content-width col-align-center"
+                                                     id="like_sc_content_width_255313062" style="max-width: 1050px">
+                                                    <div class="ltx-wrapper">
+                                                        <div class="es-resp">
+                                                            <div class="visible-xl" style="height: 32px;"></div>
+                                                            <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                 style="height: 32px;"></div>
+                                                            <div class="visible-md" style="height: 32px;"></div>
+                                                            <div class="visible-sm " style="height: 32px;"></div>
+                                                            <div class="visible-ms" style="height: 32px;"></div>
+                                                            <div class="visible-xs" style="height: 32px;"></div>
+                                                        </div>
+                                                        <div class="heading  header-subheader align-center color-black subcolor-main transform-default theme-icon-second icon-type-hidden   vc_custom_1562164638403 heading-tag-h4"
+                                                             id="like_sc_header_1373664207"><h4 data-text="Send message"
+                                                                                                class="header ltx-sr-id-like_sc_header_137366420719314850 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0">
+                                                            Déjanos un comentario o sugerencia</h4></div>
+                                                        <div class="ltx-contact-form-7 transform-default form-center form-white form-bg-white form-style-default form-btn-default form-btn-default form-padding-none    vc_custom_1568574892358"
+                                                             id="like_sc_contact_form_7_1741152486">
+                                                            <div role="form" class="form" id="fom_suggest" lang="es" dir="ltr">
+                                                                <div class="screen-reader-response"></div>
+                                                                <form action="/" method="POST" novalidate="novalidate" id="suggest_form">
+                                                                {% csrf_token %}
+                                                                    <input type="hidden" name="action" value="addsugest">
+                                                                    {% for field in form %}
+                                                                        <div class="col-lg-{{ field.field.widget.attrs.col }}" style="padding: 15px;">
+                                                                           <div class="wrapper">
+                                                                            {{ field }}
+                                                                               {% if field.field.widget.attrs.class_label %}
+                                                                                   <label for="{{ field.id_for_label }}" class="{{ field.field.widget.attrs.class_label }}">{{ field.label_tag }}</label>
+                                                                               {% endif %}
+                                                                        </div>
+                                                                        {% for error in field.errors.data %}
+                                                                            {% for mensaje in error.messages %}
+                                                                            <p class="error">{{ mensaje }}</p>
+                                                                            {% endfor %}
+                                                                        {% endfor %}
+                                                                        
+                                                                        </div>
+                                                                        {% endfor %}
+                                                                    <p><input type="submit" value="Enviar"/>
+                                                                    </p>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="es-resp">
+                                                            <div class="visible-xl" style="height: 64px;"></div>
+                                                            <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                 style="height: 64px;"></div>
+                                                            <div class="visible-md" style="height: 64px;"></div>
+                                                            <div class="visible-sm " style="height: 64px;"></div>
+                                                            <div class="visible-ms" style="height: 64px;"></div>
+                                                            <div class="visible-xs" style="height: 64px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 <div class="wpb_column vc_column_container vc_col-sm-6">
+                                     <div class="heading  header-subheader align-center subcolor-main transform-default has-subheader theme-icon-second icon-type-hidden heading-tag-h2" id="like_sc_header_840369310">
+                                    <h2 data-text="Tu ubicación" class="header ltx-sr-id-like_sc_header_8403693101563329711 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0 ltx-check-scroll ltx-glitch done">
+                                        Tu ubicación <i class="fa fa-map-marker"></i></h2></div>
+                                     <p style="opacity: .75; margin-bottom: 0!important; font-size:14px">* Si requieres una inspección para contratar nuestro servicio, por favor ubica tu dirección en el mapa y nosotros realizaremos una inspección técnica.</p>
+                                    <div id="map"></div>
+
+                                     </div>
+
+                                </div>
+                            </section>
+                            <div class="vc_row-full-width vc_clearfix"></div>
+                        </div>
+                    </article>
+    </div>
+    <style>
+
+        #map{
+            height: 503px !important;
+            width: 100%;
+            position: relative;
+            z-index: 0;
+            margin-top: 0 !important;
+        }
+        .error{
+            text-align: start;
+            color: red;
+            margin-bottom: 0 !important;
+        }
+
+
+        .name-input {
+            padding: 0.6rem 1.24rem;
+            color: #444;
+            font-size: 1.5rem;
+        }
+
+        .name-label {
+            position: absolute;
+            top: 1.6rem;
+            left:1.2rem;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 1.5rem;
+            transition: 0.4s all;
+            padding-inline:0.25rem;
+        }
+
+        .name-input:focus~.name-label,
+        .name-valid:focus~.name-label {
+            top: -0.5rem;
+            left: 0.5rem;
+            background-color: #fff;
+            font-size: 1rem;
+            color: rgba(0, 0, 0, 0.93);
+        }
+    </style>
+<script type="text/javascript">
+
+    var map;
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        map = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(map);
+
+        var geocoder = L.Control.geocoder({
+            defaultMarkGeocode: false
+        }).on('markgeocode', function (e) {
+                var bbox = e.geocode.bbox;
+                var poly = L.polygon([
+                    bbox.getSouthEast(),
+                    bbox.getNorthEast(),
+                    bbox.getNorthWest(),
+                    bbox.getSouthWest()
+                ]).addTo(map);
+                map.fitBounds(poly.getBounds());
+            }).addTo(map);
+        var marker_actual;
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+            var lng_txt = document.getElementById('id_longitud');
+            var lat_txt = document.getElementById('id_latitud');
+            lng_txt.value = lng;
+            lat_txt.value = lat;
+
+
+            map.setView([lat, lng], 13); // establece la vista del mapa en la ubicación actual del usuario
+
+            // agrega un marcador en la ubicación actual del usuario
+            marker_actual = L.marker([lat, lng]).addTo(map);
+            marker_actual.bindPopup(`<span style="font-size: 9px"><b>Ubicación actual</b> ${lat},${lng}</span>`);
+    }, function (err) {
+                        Swal.fire('Active la ubicación de esta página, si usted a denegado el acceso en su navegador para rastrear su ubicación\n vuelva a activarla ingresando a \n Configuración > Privacidad > Ubicación\n y permita el acceso a este sitio.', '', 'error');
+                    })
+
+        map.on('click', function (e) {
+            lat = e.latlng.lat;
+            lon = e.latlng.lng;
+            if (marker_actual) {
+                marker_actual.remove()
+            }
+            var lng_txt = document.getElementById('id_longitud');
+            var lat_txt = document.getElementById('id_latitud');
+            lng_txt.value = lon;
+            lat_txt.value = lat;
+            marker_actual = L.marker([lat, lon]).addTo(map);
+            marker_actual.bindPopup(`<span style="font-size: 9px"><b>Ubicación actual</b><br> ${lat},${lon}</span>`);
+            map.setView([lat, lon]);
+        });
+
+        const form = document.getElementById('suggest_form');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+            const formData = new FormData(form); // Crea un objeto FormData con los datos del formulario
+            fetch('/', {method: 'POST', body: formData}).then(result => {
+                    if (result.ok) {
+                        document.getElementById('id_nombre').value = '';
+                        document.getElementById('id_email').value = '';
+                        document.getElementById('id_sugerencia').value = '';
+                        Swal.fire('Mensaje enviado!', 'Muchas gracias tu mensaje fue enviado correctamente!', 'success')
+                    } else {
+                        Swal.fire('Error!', 'Hubo un error al enviar el formulario!', 'error')
+                        {#console.error('Hubo un error al enviar el formulario');#}
+                    }
+                }).catch(error => {
+                    // Hubo un error de red
+                    console.error('Hubo un error de red al enviar el formulario', error);
+                });
+        });
+
+
+    });
+
+
+
+</script>
+{% endblock %}
+
+

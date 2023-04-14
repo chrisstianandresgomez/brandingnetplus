@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block sxtra_styles %}
+{% endblock %}
+{% block morescripts %}
+    <style>
+        .parrafo-grande {
+            line-height: 1.5;
+        }
+    </style>
+{% endblock %}
+{% block classnav %} {{ classnav }}{% endblock %}
+{% block hearder_wrapper %}
+    <header class="page-header">
+        <div class="container"><span class="ltx-before"></span>
+            <h1 class="header ltx-check-scroll ltx-glitch" data-text="Acerca de nostros">Acerca de nosotros</h1>
+            <ul class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+                <li class="home"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+                                                                                       title="Ir al inicio." href="/"
+                                                                                       class="home"><span
+                        property="name">Inicio</span></a><meta property="position" content="1"></span></li>
+                <li class="post post-page current-item"><span property="itemListElement" typeof="ListItem"><span
+                        property="name">Acerca de nostros</span><meta property="position" content="2"></span></li>
+            </ul>
+            <span class="ltx-after"></span>
+            <div class="ltx-header-icon"></div>
+        </div>
+    </header>
+{% endblock %}
+{% block wrapper %}text-page margin-top{% endblock %}
+{% block content %}
+<div class="col-xl-9 col-lg-8 col-md-12 ltx-blog-wrap">
+    <div class="blog blog-block layout-classic">
+        <div class="row ">
+            {% for categoria in categorias %}
+            {% if not categoria.titulo == '' %}
+                {% if not forloop.first %}<hr>
+
+                {% endif %} <h1 class="header ltx-check-scroll ltx-glitch" data-text="{{ categoria.titulo }}">{{ categoria.titulo }}</h1>
+                    {% endif %}
+                {% for sub in categoria.subcategorias %}
+                     <div class="col-lg-12 col-xs-12 div-thumbnail">
+                    <article id="post-{{ sub.pk }}"
+                             class="post-{{ sub.pk }} post type-post status-publish format-standard has-post-thumbnail hentry category-broadband tag-broadband">
+                        <a href="#" class="photo"><img
+                                width="1120" height="720"
+                                src="{{ sub.get_imagen }}"
+                                class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""/></a>
+                        <div class="description">
+                            <a href="#" class="header">
+                                <h3>{{ sub.titulo }}</h3></a>
+                            <div class="text text-page parrafo-grande"><p>{{ sub.descripcion }} &#8230;</p></div>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+

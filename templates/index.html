@@ -1,0 +1,839 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-xl-12 col-xs-12 text-page">
+        <article id="post-7925" class="post-7925 page type-page status-publish hentry">
+        <div class="entry-content clearfix" id="entry-div">
+            <div data-vc-full-width="true" data-vc-full-width-init="false"
+                 data-vc-stretch-content="true"
+                 class="vc_row wpb_row vc_row-fluid vc_row-no-padding bg-color-black displaced-top">
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                            <div class="slider-zoom  zoom-default  zoom-style-default  zoom-origin-center-center  ltx-zs-overlay-dark  bullets-false  zoom-content-effect-fade-top  zoom-margin-top  zs-enabled"
+                                 id="like_sc_zoom_slider_548589305" data-zs-prev="" data-zs-next=""
+                                 data-zs-overlay="dark" data-zs-initzoom="1.2" data-zs-speed="20000"
+                                 data-zs-interval="6500" data-zs-switchspeed="7000" data-zs-arrows="true"
+                                 data-zs-bullets="false"
+{#                                 data-zs-src="[{% for imagen in banners %}&quot;https://img.olhardigital.com.br/wp-content/uploads/2022/10/editar-foto-perfil.jpg&quot; {% if not forloop.last %},{% endif %}{% endfor %}&quot;https://wsimercadoweb.com/wp-content/uploads/2020/05/Familia-Tablet.jpg&quot;,&quot;https://www.diariamenteali.com/medias/banner-museos-virtuales-1900Wx500H?context=bWFzdGVyfHJvb3R8MTUwMDMyfGltYWdlL2pwZWd8aDMwL2gwZi85MDc0Mjg5MzQ0NTQyL2Jhbm5lci1tdXNlb3MtdmlydHVhbGVzXzE5MDBXeDUwMEh8OWZjMGZiOTUzMGM0ZWI0ZTAyYzNjYTQ1YWYzYTIxYmM1MzVjZWVhMzBlYTcwNGIzMTJkNGJhNmM1MzkxZDA3NQ&quot;]"#}
+                                 data-zs-src="[{% for imagen in banners %}&quot;{{ imagen.get_imagen }}&quot; {% if not forloop.last %},{% endif %}{% endfor %}]"
+                                 style="position: relative;">
+                                <div class="zs-slideshow" style="min-height: 788px;">
+                                    <div class="zs-layer"></div>
+                                    <div class="zs-slides">
+                                        <div class="zs-slide zs-slide-0"
+                                             style="background-image: url('https://img.olhardigital.com.br/wp-content/uploads/2022/10/editar-foto-perfil.jpg');"></div>
+                                        <div class="zs-slide zs-slide-1 "
+                                             style="background-image: url('https://wsimercadoweb.com/wp-content/uploads/2020/05/Familia-Tablet.jpg'); transition: transform 20000ms ease-out 0s, opacity 1000ms ease 0s; opacity: 1; transform: scale(1.2, 1.2); z-index: 2;"></div>
+                                        <div class="zs-slide zs-slide-2"
+                                             style="background-image: url('https://www.diariamenteali.com/medias/banner-museos-virtuales-1900Wx500H?context=bWFzdGVyfHJvb3R8MTUwMDMyfGltYWdlL2pwZWd8aDMwL2gwZi85MDc0Mjg5MzQ0NTQyL2Jhbm5lci1tdXNlb3MtdmlydHVhbGVzXzE5MDBXeDUwMEh8OWZjMGZiOTUzMGM0ZWI0ZTAyYzNjYTQ1YWYzYTIxYmM1MzVjZWVhMzBlYTcwNGIzMTJkNGJhNmM1MzkxZDA3NQ');"></div>
+                                    </div>
+                                </div>
+                                <div class="container ltx-zs-slider-wrapper" style="z-index: 2; position: relative; min-height: 788px;">
+                                    {% for banner in banners %}
+                                    <div class="ltx-zs-slider-inner  inited  ltx-zs-slide-{{ forloop.counter0 }}" data-index="{{ forloop.counter0 }}">
+                                        <div class="vc_row wpb_row vc_row-fluid vc_row-o-content-bottom vc_row-flex text-align-center-sm-ms">
+                                            <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-12 vc_col-md-12">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="es-resp">
+                                                            <div class="visible-xl" style="height: 110px;"></div>
+                                                            <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                 style="height: 110px;"></div>
+                                                            <div class="visible-md" style="height: 110px;"></div>
+                                                            <div class="visible-sm " style="height: 110px;"></div>
+                                                            <div class="visible-ms" style="height: 0px;"></div>
+                                                            <div class="visible-xs" style="height: 0px;"></div>
+                                                        </div>
+                                                        <div class="ltx-content-width ltx-dark col-align-left"
+                                                             id="like_sc_content_width_320207630"
+                                                             style="max-width: 755px; margin-left: 5%;">
+                                                            <div class="ltx-wrapper">
+                                                                {% if banner.muestravalor %}
+                                                                    <div class="heading  header-label align-center color-second subcolor-white transform-default icon-type-hidden ltx-special-slider heading-tag-h6"
+                                                                     id="like_sc_header_12637377"><h6
+                                                                        data-text="{% if not banner.gratis %}desde {% endif %}<span> {{ banner.get_valor }}$ </span>"
+                                                                        class="header -id-like_sc_header_12637377352101697  -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
+                                                                    {% if not banner.gratis %}desde<br>{% endif %} <span> {% if not banner.gratis %}{{ banner.get_valor }}${% else %}GRATIS{% endif %} </span></h6></div>
+                                                                {% endif %}
+
+                                                                <div class="es-resp">
+                                                                    <div class="visible-xl" style="height: 0px;"></div>
+                                                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                         style="height: 0px;"></div>
+                                                                    <div class="visible-md" style="height: 0px;"></div>
+                                                                    <div class="visible-sm " style="height: 0px;"></div>
+                                                                    <div class="visible-ms" style="height: 32px;"></div>
+                                                                    <div class="visible-xs" style="height: 32px;"></div>
+                                                                </div>
+                                                                <div class="heading  default align-left color-white subcolor-second transform-default icon-type-hidden heading-tag-h2"
+                                                                     id="like_sc_header_1295312677"><h2
+                                                                        data-text="{{ banner.titulo }} <span> {{ banner.subtitulo }} </span>"
+                                                                        class="header -id-like_sc_header_1295312677106870745  -effect-fade_in -el-block -delay-0 -duration-1000 -sequences-0">
+                                                                    {{ banner.titulo }}<br> <span> {{ banner.subtitulo }} </span>
+                                                                </h2></div>
+                                                                <div class="es-resp">
+                                                                    <div class="visible-xl" style="height: 8px;"></div>
+                                                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                         style="height: 8px;"></div>
+                                                                    <div class="visible-md" style="height: 8px;"></div>
+                                                                    <div class="visible-sm " style="height: 8px;"></div>
+                                                                    <div class="visible-ms" style="height: 8px;"></div>
+                                                                    <div class="visible-xs" style="height: 8px;"></div>
+                                                                </div>
+                                                                <div class="wpb_text_column wpb_content_element ">
+                                                                    <div class="wpb_wrapper"><p>{{ banner.descripcion }}.</p></div>
+                                                                </div>
+                                                                <div class="es-resp">
+                                                                    <div class="visible-xl" style="height: 48px;"></div>
+                                                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                         style="height: 48px;"></div>
+                                                                    <div class="visible-md" style="height: 48px;"></div>
+                                                                    <div class="visible-sm "
+                                                                         style="height: 48px;"></div>
+                                                                    <div class="visible-ms" style="height: 48px;"></div>
+                                                                    <div class="visible-xs" style="height: 48px;"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="es-resp">
+                                                            <div class="visible-xl" style="height: 250px;"></div>
+                                                            <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                                 style="height: 250px;"></div>
+                                                            <div class="visible-md" style="height: 250px;"></div>
+                                                            <div class="visible-sm " style="height: 250px;"></div>
+                                                            <div class="visible-ms" style="height: 140px;"></div>
+                                                            <div class="visible-xs" style="height: 140px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="zs-arrows">
+                                    <div class="">
+                                        <span class="ltx-arrow-right"></span><span class="ltx-arrow-left"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vc_row-full-width vc_clearfix"></div>
+            <div class="vc_row wpb_row vc_row-fluid vc_custom_1567540620755 vc_row-has-fill bg-color-gray displaced-top">
+                <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-has-fill bg-color-gray">
+                    <div class="vc_column-inner vc_custom_1567540725852">
+                        <div class="wpb_wrapper">
+                            <ul class="ltx-block-icon  has-descr  icons-count-3 align-left ltx-icon-color-black ltx-icon-size-xl ltx-header-color-default ltx-icon-type-circle ltx-bg-color-transparent layout-cols3 ltx-icon-ht-right  row centered" id="like_sc_block_icon_1142871273">
+                                <li class=" col-lg-4 col-md-4 col-sm-4 col-ms-4 col-xs-12">
+                                    <div class="in"><span class="ltx-icon icon-wifi-router bg-transparent"></span>
+                                        <div class="block-right"><h4 class="header"> Banda ancha</h4>
+                                            <div class="descr">Internet ilimitado de alta velocidad para toda la familia y dispositivos</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class=" col-lg-4 col-md-4 col-sm-4 col-ms-4 col-xs-12">
+                                    <div class="in"><span class="ltx-icon icon-satellite-dish bg-transparent"></span>
+                                        <div class="block-right"><h4 class="header"> TV via internet</h4>
+                                            <div class="descr">Más de 200 canales de entretenimiento con películas, dibujos animados, deportes y espectáculos</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class=" col-lg-4 col-md-4 col-sm-4 col-ms-4 col-xs-12 ">
+                                    <div class="in"><span
+                                            class="ltx-icon icon-speedometer bg-transparent"></span>
+                                        <div class="block-right"><h4 class="header">Fibra óptica</h4>
+                                            <div class="descr">Internet de fibra óptica de alta velocidad para conexión de multiples dispositidos en simultaneo</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="vc_section">
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 125px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 125px;"></div>
+                                    <div class="visible-md" style="height: 80px;"></div>
+                                    <div class="visible-sm " style="height: 80px;"></div>
+                                    <div class="visible-ms" style="height: 80px;"></div>
+                                    <div class="visible-xs" style="height: 80px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid text-align-center-md-sm-ms">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-4 vc_col-md-6">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 48px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 48px;"></div>
+                                    <div class="visible-md" style="height: 48px;"></div>
+                                    <div class="visible-sm " style="height: 48px;"></div>
+                                    <div class="visible-ms" style="height: 32px;"></div>
+                                    <div class="visible-xs" style="height: 32px;"></div>
+                                </div>
+                                <ul class="ltx-block-icon  has-descr  icons-count-3 align-left ltx-icon-color-main ltx-icon-size-xl ltx-header-color-default ltx-icon-type-circle ltx-bg-color-transparent layout-cols1 ltx-icon-ht-right "
+                                    id="like_sc_block_icon_664416301">
+                                    <li>
+                                        <div class="in"><span class="ltx-icon icon-speedometer bg-transparent"></span>
+                                            <div class="block-right"><h6 class="header"> Conexión ultra-rápida</h6>
+                                                <div class="descr">Ofrecemos diferentes velocidades de conexión y opciones de paquetes para que nuestros usuarios puedan elegir el plan que mejor se ajuste a sus requerimientos de navegación y uso de internet.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="in"><span class="ltx-icon icon-money bg-transparent"></span>
+                                            <div class="block-right"><h6 class="header"> Tarifas y planes flexible</h6>
+                                                <div class="descr">Todos nuestros planes de internet tienen tarifas competitivas y flexibles, adaptadas a las necesidades y presupuesto de nuestros clientes.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-4 vc_hidden-md vc_hidden-sm vc_hidden-xs">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_single_image wpb_content_element vc_align_center">
+                                    <figure class="wpb_wrapper vc_figure">
+                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540"
+                                                                                                       height="566"
+                                                                                                       src="/static/wp-content/uploads/2019/09/internet-icons-bg.jpg"
+                                                                                                       class="vc_single_image-img attachment-full"
+                                                                                                       alt=""
+                                                                                                       srcset="/static/wp-content/uploads/2019/09/internet-icons-bg.jpg 540w, /static/wp-content/uploads/2019/09/internet-icons-bg.jpg 286w, /static/wp-content/uploads/2019/09/internet-icons-bg.jpg 360w, /static/wp-content/uploads/2019/09/internet-icons-bg.jpg 24w, /static/wp-content/uploads/2019/09/internet-icons-bg.jpg 525w"
+                                                                                                       sizes="(max-width: 540px) 100vw, 540px">
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-4 vc_col-md-6">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 48px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 48px;"></div>
+                                    <div class="visible-md" style="height: 48px;"></div>
+                                    <div class="visible-sm " style="height: 54px;"></div>
+                                    <div class="visible-ms" style="height: 54px;"></div>
+                                    <div class="visible-xs" style="height: 54px;"></div>
+                                </div>
+                                <ul class="ltx-block-icon  has-descr  icons-count-3 align-right ltx-icon-color-main ltx-icon-size-xl ltx-header-color-default ltx-icon-type-circle ltx-bg-color-transparent layout-cols1 ltx-icon-ht-left "
+                                    id="like_sc_block_icon_186957944">
+                                    <li>
+                                        <div class="in"><span class="ltx-icon icon-wifi bg-transparent"></span>
+                                            <div class="block-right"><h6 class="header"> <span class="mdi mdi-asterisk" style="color:red"></span> Instalación gratis </h6>
+                                                <div class="descr">Nuestro equipo de instaladores está altamente capacitado y tiene la experiencia necesaria para instalar y configurar el servicio en diferentes tipos de hogares y entornos.
+                                                    <br>
+                                                </div>
+                                                <p style="font-size:10px"><span class="mdi mdi-asterisk"></span> Aplica restricciones para cada plan</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li style="margin-top: 70px;">
+                                        <div class="in"><span class="ltx-icon icon-support bg-transparent"></span>
+                                            <div class="block-right"><h6 class="header"> Soporte 24/7</h6>
+                                                <div class="descr">Nuestro equipo de soporte está disponible las 24 horas del día, los 7 días de la semana para ayudar con consultas, solución de problemas, instalaciones y configuraciones.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 130px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 130px;"></div>
+                                    <div class="visible-md" style="height: 130px;"></div>
+                                    <div class="visible-sm " style="height: 130px;"></div>
+                                    <div class="visible-ms" style="height: 100px;"></div>
+                                    <div class="visible-xs" style="height: 100px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="vc_row-full-width vc_clearfix"></div>
+            <section data-vc-full-width="true" data-vc-full-width-init="false"
+                     class="vc_section bg-color-black">
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 48px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 48px;"></div>
+                                    <div class="visible-md" style="height: 48px;"></div>
+                                    <div class="visible-sm " style="height: 48px;"></div>
+                                    <div class="visible-ms" style="height: 48px;"></div>
+                                    <div class="visible-xs" style="height: 48px;"></div>
+                                </div>
+                                <div class="heading  header-subheader align-center subcolor-main transform-default has-subheader theme-icon-second icon-type-hidden heading-tag-h2"
+                                     id="like_sc_header_840369310"><h6
+                                        class="subheader ltx-sr-id-like_sc_header_8403693101535415711 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-100 ltx-sr-duration-300 ltx-sr-sequences-50">
+                                    Tarifas</h6>
+                                    <h2 data-text="Selecciona tu plan favorito"
+                                        class="header ltx-sr-id-like_sc_header_8403693101563329711 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0 ltx-check-scroll ltx-glitch done">
+                                        Selecciona tu plan favorito</h2></div>
+                                <div class="ltx-content-width col-align-center"
+                                     id="like_sc_content_width_1563647888"
+                                     style="max-width: 1000px">
+                                    <div class="ltx-wrapper">
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper"><p
+                                                    style="text-align: center;">Elige entre nuestros planes disponibles.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 56px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 56px;"></div>
+                                    <div class="visible-md" style="height: 56px;"></div>
+                                    <div class="visible-sm " style="height: 56px;"></div>
+                                    <div class="visible-ms" style="height: 56px;"></div>
+                                    <div class="visible-xs" style="height: 56px;"></div>
+                                </div>
+                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                    {% for plan in planes %}
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-3 vc_col-md-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div data-mh="ltx-tariff-item"
+                                                     class="tariff-item item  layout-default {% if plan.popular %}vip{% endif %}"
+                                                     id="like_sc_tariff_{{ forloop.counter }}">
+                                                    <div class="ltx-header-wrapper">{% if plan.popular %}<span
+                                                            class="label-vip">popular<span
+                                                            class="ltx-triangle"></span></span>{% endif %}
+                                                        <h6
+                                                            class="subheader">Plan</h6><h4
+                                                            class="header">{{ plan.nombre }}</h4>
+                                                        <ul class="ltx-tariff-icons">
+                                                            <li><i class="{{ plan.logohtml }} fa-3x"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <ul class="ltx-tariff-list">
+                                                        {% for caracteristica in plan.caracteristicas %}
+                                                          <li>{{ caracteristica }}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                    <div class="price">${{ plan.valor }} {% if not plan.incluyeiva %}<span class="ltx-icon ltx-icon-text  bg-transparent"
+                                                                                               style="font-size: 12px!important;">+iva </span>{% endif %}
+                                                        <span> | Mensual </span>
+                                                    </div>
+                                                    <div><a href="https://web.whatsapp.com/send/?phone={{ telefonowhastapp }}&text=Hola NET PLUS, necesito información acerca del {{ plan.nombre_completo_producto }}&type=phone_number&app_absent=0" target="_blank" class="btn btn-lg  btn-main">Me interesa!</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="es-resp">
+                                                    <div class="visible-xl"
+                                                         style="height: 130px;"></div>
+                                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                                         style="height: 130px;"></div>
+                                                    <div class="visible-md"
+                                                         style="height: 130px;"></div>
+                                                    <div class="visible-sm "
+                                                         style="height: 130px;"></div>
+                                                    <div class="visible-ms"
+                                                         style="height: 90px;"></div>
+                                                    <div class="visible-xs"
+                                                         style="height: 90px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="vc_row-full-width vc_clearfix"></div>
+            <section data-vc-full-width="true" data-vc-full-width-init="true"
+                     class="vc_section vc_custom_1568576655287 vc_section-has-fill text-align-center-sm-ms"
+                     style="position: relative; left: -13.1818px; box-sizing: border-box; width: 1226px; padding-left: 13.1818px; padding-right: 12.8182px;">
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-9">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 130px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 130px;"></div>
+                                    <div class="visible-md" style="height: 90px;"></div>
+                                    <div class="visible-sm " style="height: 32px;"></div>
+                                    <div class="visible-ms" style="height: 32px;"></div>
+                                    <div class="visible-xs" style="height: 32px;"></div>
+                                </div>
+                                <div class="heading  default align-left subcolor-main transform-default icon-type-hidden heading-tag-h2"
+                                     id="like_sc_header_31241086"><h2 data-text="Test our TV and Internet<br />just for <span> 1$ per month </span>"
+                                                                      class="header ltx-sr-id-like_sc_header_312410861479385093 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0"
+                                                                      data-sr-id="9"
+                                                                      style="visibility: visible; transform: scale(1); opacity: 1; transition: all 0.3s ease 0s;">
+                                    Prueba nuestro servicio de Internet {% if sitio.plan_minimo %} desde <br><span> ${{ sitio.plan_minimo.valor }} mensual {% endif %}</span></h2></div>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 32px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 32px;"></div>
+                                    <div class="visible-md" style="height: 32px;"></div>
+                                    <div class="visible-sm " style="height: 32px;"></div>
+                                    <div class="visible-ms" style="height: 32px;"></div>
+                                    <div class="visible-xs" style="height: 32px;"></div>
+                                </div>
+                                <ul class="ltx-block-icon  icons-count-1 align-left ltx-icon-color-main ltx-icon-size-xl ltx-header-color-default ltx-icon-type-circle ltx-bg-color-transparent layout-inline ltx-icon-h-right "
+                                    id="like_sc_block_icon_1436950701">
+                                    <li>
+                                        <div class=""><span class="ltx-icon icon-wifi  bg-transparent"></span>
+                                            <div class="block-right"><h6 class="header"> Router WiFi 5G inlcuido</h6>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 60px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 60px;"></div>
+                                    <div class="visible-md" style="height: 32px;"></div>
+                                    <div class="visible-sm " style="height: 32px;"></div>
+                                    <div class="visible-ms" style="height: 32px;"></div>
+                                    <div class="visible-xs" style="height: 32px;"></div>
+                                </div>
+                                <div class="btn-wrap"><span class="ltx-btn-wrap ltx-btn-wrap-main"><a href="https://web.whatsapp.com/send/?phone={{ telefonowhastapp }}&text=Hola NET PLUS, necesito información acerca {% if sitio.plan_minimo %} del {{ sitio.plan_minimo.nombre_completo_producto }}{% else %} de sus planes de internet{% endif %}&type=phone_number&app_absent=0" target="_blank"
+                                                                                                      class="btn  btn-lg btn-main color-hover-default"
+                                                                                                      id="like_sc_button_117876120">Me interesa</a></span>
+                                </div>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 200px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 200px;"></div>
+                                    <div class="visible-md" style="height: 90px;"></div>
+                                    <div class="visible-sm " style="height: 90px;"></div>
+                                    <div class="visible-ms" style="height: 90px;"></div>
+                                    <div class="visible-xs" style="height: 90px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-6 vc_col-md-3 vc_hidden-sm vc_hidden-xs">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="heading  header-label align-center subcolor-main transform-default icon-type-hidden ltx-special-offer heading-tag-h6"
+                                     id="like_sc_header_1670946855"><h6 data-text="Oferta<br />especial"
+                                                                        class="header ltx-sr-id-like_sc_header_1670946855278254063 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0"
+                                                                        data-sr-id="10"
+                                                                        style="visibility: visible; transform: scale(1); opacity: 1; transition: all 0.3s ease 0s;">
+                                    Oferta<br> especial</h6></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="vc_row-full-width vc_clearfix"></div>
+            <section data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_section bg-color-black">
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 60px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 60px;"></div>
+                                    <div class="visible-md" style="height: 60px;"></div>
+                                    <div class="visible-sm " style="height: 60px;"></div>
+                                    <div class="visible-ms" style="height: 60px;"></div>
+                                    <div class="visible-xs" style="height: 60px;"></div>
+                                </div>
+                                <div class="ltx-content-width col-align-center"
+                                     id="like_sc_content_width_2001617156"
+                                     style="max-width: 1000px">
+                                    <div class="ltx-wrapper">
+                                        <div class="heading  header-subheader align-center subcolor-main transform-default has-subheader theme-icon-second icon-type-hidden heading-tag-h2"
+                                             id="like_sc_header_425522001"><h6
+                                                class="subheader ltx-sr-id-like_sc_header_425522001989581994 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-100 ltx-sr-duration-300 ltx-sr-sequences-50">
+                                            Contenido de interés</h6>
+                                            <h2 data-text="Programas destacados"
+                                                class="header ltx-sr-id-like_sc_header_425522001585650458 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0 ltx-check-scroll ltx-glitch done">
+                                                Programas destacados</h2></div>
+                                    </div>
+                                </div>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 64px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 64px;"></div>
+                                    <div class="visible-md" style="height: 64px;"></div>
+                                    <div class="visible-sm " style="height: 64px;"></div>
+                                    <div class="visible-ms" style="height: 32px;"></div>
+                                    <div class="visible-xs" style="height: 32px;"></div>
+                                </div>
+                                <div class="ltx-swiper-slider-wrapper">
+                                    <div class="ltx-swiper-slider swiper-container ltx-portfolio-sc ltx-slider  layout-slider"
+                                         id="like_sc_portfolio_1673692727"
+                                         data-arrows="sides-outside"
+                                         data-autoplay="4000" data-autoplay-interaction=""
+                                         data-loop="1"
+                                         data-speed="1000" data-effect="slide"
+                                         data-slides-per-group="1"
+                                         data-breakpoints="6;5;4;3;2;1">
+                                        <div class="swiper-wrapper">
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img
+                                                    width="460" height="680"
+                                                    src="/static/wp-content/uploads/2017/02/05-1-460x680.jpg"
+                                                    class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                    alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Bambi</h6></a> <span
+                                                        class="year">2012</span><span
+                                                        class="comments">1</span><span
+                                                        class="rate">8.4</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img
+                                                    width="460" height="680"
+                                                    src="/static/wp-content/uploads/2017/02/04-1-460x680.jpg"
+                                                    class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                    alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#"><h6
+                                                        class="header">
+                                                    M-25</h6></a> <span
+                                                        class="year">2014</span><span
+                                                        class="comments">1</span><span
+                                                        class="rate">7.7</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img
+                                                    width="460" height="680"
+                                                    src="/static/wp-content/uploads/2017/02/03-1-460x680.jpg"
+                                                    class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                    alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Scream</h6></a> <span
+                                                        class="year">2016</span><span
+                                                        class="comments">0</span><span
+                                                        class="rate">8.7</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/07-1-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">The Lovers</h6></a>
+                                                    <span
+                                                            class="year">2014</span><span
+                                                            class="comments">3</span><span
+                                                            class="rate">8.2</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/06-1-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Afganistan</h6></a>
+                                                    <span
+                                                            class="year">2017</span><span
+                                                            class="comments">1</span><span
+                                                            class="rate">7.7</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/13-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6 class="header">Road to the
+                                                        Mountains</h6></a>
+                                                    <span class="year">2016</span><span
+                                                            class="comments">3</span><span
+                                                            class="rate">7.1</span>
+                                                </div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/12-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Crazy Valenite</h6>
+                                                </a> <span
+                                                        class="year">2011</span><span
+                                                        class="comments">8</span><span
+                                                        class="rate">8.4</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/11-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Summer Party</h6></a>
+                                                    <span
+                                                            class="year">2002</span><span
+                                                            class="comments">0</span><span
+                                                            class="rate">7.2</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/10-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Last Bullet</h6></a>
+                                                    <span
+                                                            class="year">2005</span><span
+                                                            class="comments">0</span><span
+                                                            class="rate">8.3</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img
+                                                    width="460" height="680"
+                                                    src="/static/wp-content/uploads/2017/02/09-1-460x680.jpg"
+                                                    class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                    alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Doctor D.</h6></a>
+                                                    <span
+                                                            class="year">2017</span><span
+                                                            class="comments">0</span><span
+                                                            class="rate">8.6</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/08-1-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Women&#8217;s
+                                                        Day</h6></a> <span
+                                                        class="year">2018</span><span
+                                                        class="comments">3</span><span
+                                                        class="rate">9.2</span></div>
+                                            </article>
+                                            <article class="ltx-item swiper-slide"><a
+                                                    href="#"
+                                                    class="photo"><img width="460" height="680"
+                                                                       src="/static/wp-content/uploads/2017/02/17-460x680.jpg"
+                                                                       class="attachment-mirasat-portfolio size-mirasat-portfolio wp-post-image"
+                                                                       alt=""/></a>
+                                                <div class="ltx-description"><a
+                                                        href="#">
+                                                    <h6
+                                                            class="header">Best Friends</h6></a>
+                                                    <span
+                                                            class="year">2013</span><span
+                                                            class="comments">0</span><span
+                                                            class="rate">6.7</span></div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 112px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 112px;"></div>
+                                    <div class="visible-md" style="height: 112px;"></div>
+                                    <div class="visible-sm " style="height: 64px;"></div>
+                                    <div class="visible-ms" style="height: 64px;"></div>
+                                    <div class="visible-xs" style="height: 64px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="vc_row-full-width vc_clearfix"></div>
+            <div data-vc-full-width="true" data-vc-full-width-init="false"
+                 class="vc_row wpb_row vc_row-fluid bg-color-black displaced-top">
+                <div class="ltx-sofa wpb_column vc_column_container vc_col-sm-12">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_single_image wpb_content_element vc_align_center  ltx-sr ltx-sr-effect-fade_in  ltx-sr-id-1068912998  ltx-sr-el-block  ltx-sr-delay-200  ltx-sr-duration-500  ltx-sr-sequences-100">
+                                <figure class="wpb_wrapper vc_figure">
+                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                        <img
+                                                width="1245" height="487"
+                                                src="/static/wp-content/uploads/2019/09/sofa.png"
+                                                class="vc_single_image-img attachment-full"
+                                                alt=""
+                                                srcset="/static/wp-content/uploads/2019/09/sofa.png 1245w, /static/wp-content/uploads/2019/09/sofa-300x117.png 300w, /static/wp-content/uploads/2019/09/sofa-768x300.png 768w, /static/wp-content/uploads/2019/09/sofa-1024x401.png 1024w, /static/wp-content/uploads/2019/09/sofa-360x141.png 360w, /static/wp-content/uploads/2019/09/sofa-600x235.png 600w, /static/wp-content/uploads/2019/09/sofa-800x313.png 800w, /static/wp-content/uploads/2019/09/sofa-550x215.png 550w"
+                                                sizes="(max-width: 1245px) 100vw, 1245px"/>
+                                    </div>
+                                </figure>
+                            </div>
+                            <div class="wpb_single_image wpb_content_element vc_align_center   ltx-popcorn ltx-sr ltx-sr-effect-slide_from_right  ltx-sr-id-1398402195  ltx-sr-el-block  ltx-sr-delay-200  ltx-sr-duration-800  ltx-sr-sequences-100">
+                                <figure class="wpb_wrapper vc_figure">
+                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                        <img
+                                                width="212" height="167"
+                                                src="/static/wp-content/uploads/2019/09/sofa-popcorn.png"
+                                                class="vc_single_image-img attachment-full"
+                                                alt=""/></div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vc_row-full-width vc_clearfix"></div>
+            <section data-vc-full-width="true" data-vc-full-width-init="false"
+                     data-vc-stretch-content="true" class="vc_section bg-color-gray">
+                <div data-vc-full-width="true" data-vc-full-width-init="false"
+                     data-vc-stretch-content="true"
+                     class="vc_row wpb_row vc_row-fluid vc_row-no-padding">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 40px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 40px;"></div>
+                                    <div class="visible-md" style="height: 40px;"></div>
+                                    <div class="visible-sm " style="height: 40px;"></div>
+                                    <div class="visible-ms" style="height: 40px;"></div>
+                                    <div class="visible-xs" style="height: 40px;"></div>
+                                </div>
+                                <div class="heading  header-subheader align-center subcolor-main transform-default has-subheader theme-icon-second icon-type-hidden heading-tag-h2"
+                                     id="like_sc_header_367618295" style="padding-top: 50px"><h6
+                                        class="subheader ltx-sr-id-like_sc_header_367618295136615716 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-100 ltx-sr-duration-300 ltx-sr-sequences-50">
+                                    Dispositivos tecnológicos</h6>
+                                    <h2 data-text="Productos populares"
+                                        class="header ltx-sr-id-like_sc_header_3676182951236970483 ltx-sr ltx-sr-effect-fade_in ltx-sr-el-block ltx-sr-delay-0 ltx-sr-duration-1000 ltx-sr-sequences-0">
+                                        Productos populares</h2></div>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 16px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 16px;"></div>
+                                    <div class="visible-md" style="height: 16px;"></div>
+                                    <div class="visible-sm " style="height: 16px;"></div>
+                                    <div class="visible-ms" style="height: 16px;"></div>
+                                    <div class="visible-xs" style="height: 16px;"></div>
+                                </div>
+                                <div class="ltx-swiper-slider-wrapper">
+                                    <div class="ltx-swiper-slider swiper-container woocommerce ltx-products-slider ltx-products-sc ltx-products-sc-full ltx-products-bg-white "
+                                         id="products_1266141771" data-arrows="bottom"
+                                         data-autoplay="0"
+                                         data-autoplay-interaction="" data-loop="1"
+                                         data-speed="1000"
+                                         data-effect="coverflow" data-slides-per-group="1"
+                                         data-breakpoints="4;;2;2;1;">
+                                        <ul class="products swiper-wrapper">
+                                            {% for producto in productos %}
+                                                 <li id="post-{{ producto.pk }}" class="swiper-slide  post-{{ producto.pk }} product type-product status-publish has-post-thumbnail product_cat-streaming product_tag-sound first instock {% if producto.popular %}sale{% endif %} shipping-taxable purchasable product-type-simple">
+                                                <div class="item">
+                                                    <div class="image">{% if producto.popular %}<span
+                                                            class="onsale">Popular</span>{% endif %}
+                                                        <img width="360" height="360" style="height:175px"
+                                                             src="{{ producto.imagen.url }}"
+                                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                             alt=""
+                                                             srcset="{{ producto.imagen.url }} 360w"
+                                                             sizes="(max-width: 360px) 100vw, 360px"/>
+                                                    </div>
+                                                        <h2 class="woocommerce-loop-product__title">
+                                                            {{ producto.nombre }}</h2>
+                                                    <div class="post_content entry-content">{{ producto.descripcion }}
+                                                    </div>
+                                                    <span class="price"><ins><span
+                                                            class="woocommerce-Price-amount amount"><span
+                                                            class="woocommerce-Price-currencySymbol">&#36;</span>{{ producto.valor }} {% if not producto.incluyeiva %}<span class="ltx-icon ltx-icon-text  bg-transparent"
+                                                                                               style="font-size: 12px!important;">+iva </span>{% endif %}</span></ins></span>
+                                                    <a href="https://web.whatsapp.com/send/?phone={{ telefonowhastapp }}&text=Hola NET PLUS, necesito información acerca del {{ producto.nombre_completo_producto }}&type=phone_number&app_absent=0" target="_blank"
+                                                       data-quantity="1"
+                                                       class="button product_type_simple"
+                                                       data-product_id="{{ producto.pk }}"
+                                                       data-product_sku=""
+                                                       rel="nofollow">Me interesa</a></div>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="es-resp">
+                                    <div class="visible-xl" style="height: 120px;"></div>
+                                    <div class="hidden-xl hidden-md hidden-sm hidden-ms hidden-xs"
+                                         style="height: 50px;"></div>
+                                    <div class="visible-md" style="height: 120px;"></div>
+                                    <div class="visible-sm " style="height: 120px;"></div>
+                                    <div class="visible-ms" style="height: 90px;"></div>
+                                    <div class="visible-xs" style="height: 90px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row-full-width vc_clearfix"></div>
+            </section>
+            <div class="vc_row-full-width vc_clearfix"></div>
+        </div>
+    </article>
+    </div>
+{% endblock %}
