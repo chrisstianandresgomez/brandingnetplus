@@ -1,4 +1,4 @@
-"""brandingnetplus URL Configuration
+"""netpluswebsite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -19,7 +19,7 @@ from django.views.static import serve
 
 import apps.website.views
 from apps import views
-from brandingnetplus import settings
+from netpluswebsite import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
