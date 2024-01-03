@@ -35,6 +35,10 @@ def view(request):
                     try:
                         data['form'] = form = SuggestForm(request.POST)
                         if form.is_valid():
+                            if not float(form.cleaned_data['latitud']) <= 0 or float(form.cleaned_data['latitud']) >=0:
+                                return JsonResponse({"result": "error", "mensaje": u"Error en la latitud"})
+                            if not float(form.cleaned_data['longitud']) <= 0 or float(form.cleaned_data['longitud']) >=0:
+                                return JsonResponse({"result": "error", "mensaje": u"Error en la longitud"})
                             form.save()
                             sug = Sugerencias.objects.all().order_by('-id').first()
                             data['sugerencia'] = sug
@@ -173,7 +177,7 @@ def send_html_mail(subject, data):
         mailServer = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
         mailServer.starttls()
         mailServer.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
-        email_to = 'chrisstianandres@gmail.com'
+        email_to = 'correonetplusec@gmail.com'
         mensaje = MIMEMultipart()
         mensaje['From'] = settings.EMAIL_HOST_USER
         mensaje['To'] = email_to
